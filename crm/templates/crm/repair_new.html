@@ -1,0 +1,11 @@
+{% extends 'crm/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="ui main container">
+    <h1>Add a New Repair</h1>
+    <form method="POST" class="repair-form">{% csrf_token %}
+          {{ form|crispy }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+    </div>
+{% endblock %}

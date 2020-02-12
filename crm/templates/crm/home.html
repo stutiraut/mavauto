@@ -1,0 +1,59 @@
+{% extends 'crm/base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <div class="ui main container">
+            {% if user.is_authenticated %}
+                <div class="page-container">
+
+                    <h2 class="top-menu">Hello {{ user.username }},</h2>
+                    <p>Please choose from below options.</p> <br/>
+
+                </div>
+            {% endif %}
+
+    <div class="ui link cards">
+
+                            <!-- Example row of columns -->
+
+                                     <div class="card">
+                                        <img src="{% static "img/customer.jpg" %}" alt="customer"/>
+
+                                            <h2>Customer</h2>
+                                            <p>We care to fix it right. Quick Mechanic for Quick help </p>
+                                            <p><a class="btn btn-primary" href="{% url 'crm:customer_list' %}"
+                                                  role="button">
+                                                <div class="ui bottom attached button">View
+                                                    details </div></a></p>
+                                     </div>
+
+                                    <div class="card">
+
+                                        <img src="{% static "img/repairservice.jpg" %}" alt="repair"/>
+
+                                            <h2>Repairs</h2>
+                                            <p>High Performance, high Class Service. Our team provides various repair services.</p>
+                                            <p><a class="btn btn-primary" href="{% url 'crm:repair_list' %}"
+                                                  role="button">
+                                                <div class="ui bottom attached button">View
+                                                    details </div></a></p>
+
+                                    </div>
+
+                                    <div class="card">
+                                        <img src="{% static "img/ticket.jpg" %}" alt="tickets"/>
+
+                                            <h2>Tickets</h2>
+                                            <p>Our services are taken care faster through tickets.</p>
+                                            <p><a class="btn btn-primary" href="{% url 'crm:ticket_list' %}"
+                                                  role="button">
+                                                <div class="ui bottom attached button">View
+                                                    details </div></a></p>
+                                    </div>
+
+
+
+    </div>
+</div>
+{% endblock %}
+
+

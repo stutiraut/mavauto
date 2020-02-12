@@ -57,6 +57,8 @@ class Ticket(models.Model):
         default=timezone.now)
     Issue = models.CharField(max_length=100)
     severity = models.CharField(max_length=50)
+    created_date = models.DateTimeField(
+        default=timezone.now)
 
 
     def created(self):

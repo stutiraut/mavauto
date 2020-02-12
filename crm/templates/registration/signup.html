@@ -1,0 +1,33 @@
+
+{% extends "crm/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="ui main container">
+  <div>
+        <h2><br>Create an account<br></h2>
+  </div>
+  {% if user_form.errors %}
+   <div>
+       {% for field in user_form %}
+        {% if field.errors %}
+            {{ field.label_tag }}
+            {{ field.errors }}
+        {% endif %}
+       {% endfor %}
+   </div>
+  {% endif %}
+    <br>
+  <div>
+    <form action="" method="post">
+      {% csrf_token %}
+            {{ user_form.username|as_crispy_field }}<br>
+            {{ user_form.password1|as_crispy_field }}<br>
+            {{ user_form.password2|as_crispy_field }}<br>
+            <div style="text-align: left;">
+                <br><button type="submit" class="save btn btn-primary">Sign up</button>
+            </div>
+        </form>
+  </div>
+</div>
+{% endblock %}
