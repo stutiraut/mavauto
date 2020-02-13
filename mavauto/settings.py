@@ -139,8 +139,8 @@ AUTHENTICATION_BACKENDS = (
     'social_core.backends.google.GoogleOAuth2',
 )
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '712564250080-eodq0koqcvli1na4lk41sk9mgjmvbud6.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'Ref6qjvOPTYWyKjd7Nigq0oq'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '172292135541-h3ffcl3bdbf7cp5qpr0mlq9ick8p7c4u.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '8_DVBqipKXti4Jr3Ir7ujYgd'
 
 STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
