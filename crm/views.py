@@ -58,6 +58,7 @@ def customer_delete(request, pk):
    return redirect('crm:customer_list')
 
 
+
 @login_required
 def repair_list(request):
     repair = Repair.objects.filter(created_date__lte=timezone.now())

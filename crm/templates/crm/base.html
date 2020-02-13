@@ -85,12 +85,11 @@
 
 
                 {% else %}
-                    <div class="ui simple dropdown item">
-                    Login
+                    <div class="ui simple dropdown item">Login
                     <i class="dropdown icon"></i>
                     <div class="menu">
                     <a href="{% url 'login' %}" class="item">LOGIN</a>
-                     <a href="{% url 'social:begin' 'google-oauth2' %}" class="item">Google Account</a>
+                     <a href="{% url 'social:begin' 'facebook' %}" class="item">Facebook</a>
                     </div>
                     </div>
                 {% endif %}

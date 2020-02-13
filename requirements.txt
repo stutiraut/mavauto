@@ -12,4 +12,4 @@ whitenoise==4.1
 social-auth-app-django
 CurrencyConverter
 googlemaps
-django-oauth-toolkit
+
