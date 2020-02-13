@@ -36,6 +36,22 @@ def customer_edit(request, pk):
 
 
 @login_required
+def customer_new(request):
+   if request.method == "POST":
+       form = CustomerForm(request.POST)
+       if form.is_valid():
+           customer = form.save(commit=False)
+           customer.created_date = timezone.now()
+           customer.save()
+           customer = Customer.objects.filter(created_date__lte=timezone.now())
+           return render(request, 'crm/customer_list.html',
+                         {'customers': customer})
+
+   else:
+       form = CustomerForm()
+   return render(request, 'crm/customer_new.html', {'form': form})
+
+@login_required
 def customer_delete(request, pk):
    customer = get_object_or_404(Customer, pk=pk)
    customer.delete()
@@ -141,4 +157,8 @@ def ticket_new(request):
    return render(request, 'crm/ticket_new.html', {'form': form})
 
 
+
+def store_location(request):
+    return render(request, 'map/storelocation.html',
+                 {'map': store_location})
 

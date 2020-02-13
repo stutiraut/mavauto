@@ -12,6 +12,7 @@ urlpatterns = [
     #url(r'^$', views.customer_list, name='customer_list'),
     path('customer/<int:pk>/edit/', views.customer_edit, name='customer_edit'),
     path('customer/<int:pk>/delete/', views.customer_delete, name='customer_delete'),
+    path('customer/create/', views.customer_new, name='customer_new'),
     path('repair_list', views.repair_list, name='repair_list'),
     path('customer_list', views.customer_list, name='customer_list'),
     path('repair/<int:pk>/edit/', views.repair_edit, name='repair_edit'),
@@ -21,8 +22,7 @@ urlpatterns = [
     path('ticket/<int:pk>/delete/', views.ticket_delete, name='ticket_delete'),
     path('ticket/<int:pk>/edit/', views.ticket_edit, name='ticket_edit'),
     path('ticket/create/', views.ticket_new, name='ticket_new'),
-
-
+    path('map/store_location/',views.store_location, name='store_location')
 
 
 

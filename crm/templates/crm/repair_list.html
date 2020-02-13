@@ -59,7 +59,8 @@
                     <td>{{ repair.repair_item }}</td>
                     <td>{{ repair.repair_model }}</td>
                     <td>{{ repair.description }}</td>
-                    <td>{{ repair.repair_charge }}</td>
+                    <td>${{ repair.repair_charge }} Or
+                 €{{ repair.currency_price }}</td>
                     <td><a href="{% url 'crm:repair_edit' pk=repair.pk %}" class="btn btn-warning">Edit</a>
 
                     <td><a href="{% url 'crm:repair_delete' pk=repair.pk %}" onclick="return confirm('Are you sure you want to delete?')"

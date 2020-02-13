@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-
+from currency_converter import CurrencyConverter
 
 # Create your models here.
 class Customer(models.Model):
@@ -50,6 +50,14 @@ class Repair(models.Model):
     def __str__(self):
         return str(self.repair_id )
 
+    def currency_price(self):
+        c = CurrencyConverter()
+        currency = c.convert(float(self.repair_charge), 'USD', 'EUR')
+        return round(currency, 2)
+
+
+
+
 class Ticket(models.Model):
     cust_name = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name='tickets')
     repair_id = models.ForeignKey(Repair, on_delete=models.CASCADE, related_name='item', default='repair_id', blank=True)
@@ -71,3 +79,6 @@ class Ticket(models.Model):
 
     def __str__(self):
         return str(self.repair_id )
+
+
+

@@ -70,7 +70,7 @@
             <a href="{% url 'crm:customer_list'%}" class="item"><h5>CUSTOMERS </h5></a>
             <a href="{% url 'crm:repair_list'%}" class="item"><h5>REPAIRS</h5></a>
             <a href="{% url 'crm:ticket_list'%}" class="item"><h5>TICKETS</h5></a>
-
+            <a href="{% url 'crm:store_location' %}" class ="item"><h5>STORE LOCATION</h5></a>
 
         {% block dropdown %}
             {% endblock %}
@@ -81,7 +81,7 @@
                 {% if user.is_authenticated %}
 
 
-                            <a href="{% url 'logout' %}" class="item">LOGOUT</a>
+                    <a href="{% url 'logout' %}" class="item"><h5>LOGOUT</h5></a>
 
 
                 {% else %}
