@@ -3,11 +3,17 @@
 {% block title %}Create an account{% endblock %}
 
 {% block content %}
-  <h1>Create an account</h1>
-  <p>Please, sign up using the following form:</p>
-  <form action="." method="post">
+    <div class="ui main container">
+    <h1>Create an account</h1>
+
+
+    <p>Please, sign up using the following form:</p>
+    <form action="{% url 'crm:register' %}" method="post">
     {{ user_form.as_p }}
     {% csrf_token %}
     <p><input type="submit" value="Create my account"></p>
-  </form>
+    </form>
+    </div>
 {% endblock %}
+
+

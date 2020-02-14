@@ -5,13 +5,15 @@
 {% block content %}
   <h1>Log-in</h1>
   {% if form.errors %}
+      <div class="ui main container">
     <p>
       Your username and password didn't match.
       Please try again.
     </p>
+      </div>
   {% else %}
       <div class="ui main container">
-    <p>Please, use the following form to log-in. If you don't have an account <a href="">register here</a></p>
+    <p>Please, use the following form to log-in. If you don't have an account <a href="{% url "crm:register" %}">register here</a></p>
 
   {% endif %}
 

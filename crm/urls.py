@@ -22,7 +22,8 @@ urlpatterns = [
     path('ticket/<int:pk>/delete/', views.ticket_delete, name='ticket_delete'),
     path('ticket/<int:pk>/edit/', views.ticket_edit, name='ticket_edit'),
     path('ticket/create/', views.ticket_new, name='ticket_new'),
-    path('map/store_location/',views.store_location, name='store_location')
+    path('map/store_location/',views.store_location, name='store_location'),
+    url(r'^register/$', views.register, name='register'),
 
 
 
