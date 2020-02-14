@@ -135,13 +135,11 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
 AUTHENTICATION_BACKENDS = (
-    'social_core.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.google.GoogleOAuth2',
 )
 
 
-#SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '172292135541-h3ffcl3bdbf7cp5qpr0mlq9ick8p7c4u.apps.googleusercontent.com'
-#SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '8_DVBqipKXti4Jr3Ir7ujYgd'
 
 STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -176,5 +174,6 @@ LOGOUT_REDIRECT_URL = '/'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
-SOCIAL_AUTH_FACEBOOK_KEY = '218014715996732' ##APP ID
-SOCIAL_AUTH_FACEBOOK_SECRET = 'aa03b5f6df04bf8f1e9b10d30fbcc3f7' ##APP Secret
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '172292135541-h3ffcl3bdbf7cp5qpr0mlq9ick8p7c4u.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '8_DVBqipKXti4Jr3Ir7ujYgd'
