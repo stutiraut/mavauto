@@ -1,12 +1,6 @@
-Username:
-ISQA8380.860@gmail.com
-
-Password:
-Team3@UNO
-
 
 Client ID:
-712564250080-eodq0koqcvli1na4lk41sk9mgjmvbud6.apps.googleusercontent.com
+984187220897-m0tcbnsrmpfiii0ribk0beiaf3k5mja7.apps.googleusercontent.com
 
 Client secret:
-Ref6qjvOPTYWyKjd7Nigq0oq
+EGIOVdHseP4S3LE7w98DnSia
