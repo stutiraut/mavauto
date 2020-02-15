@@ -175,5 +175,5 @@ LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '172292135541-h3ffcl3bdbf7cp5qpr0mlq9ick8p7c4u.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '8_DVBqipKXti4Jr3Ir7ujYgd'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '984187220897-m0tcbnsrmpfiii0ribk0beiaf3k5mja7.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'EGIOVdHseP4S3LE7w98DnSia'
