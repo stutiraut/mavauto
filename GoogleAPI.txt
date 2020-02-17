@@ -1,6 +1,0 @@
-
-Client ID:
-984187220897-m0tcbnsrmpfiii0ribk0beiaf3k5mja7.apps.googleusercontent.com
-
-Client secret:
-EGIOVdHseP4S3LE7w98DnSia
